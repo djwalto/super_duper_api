@@ -14,6 +14,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// posts
+
+// CRUD basics
+
+// 1. get all (GET) /api/posts
+
+// 2. create a post (POST) /api/posts
+
+// 3. get a single (GET) /api/posts/{id}
+
+// 4. update a single (PUT/PATCH) /api/posts/{id}
+
+// 5. delete (DELETE) /api/posts/{id}
+
+
+
+Route::get('/posts', function () {
+    return ['message' => 'hello'];
+});
+
+// to create a resource (posts) in laravel
+
+// 1. create the database and migrations
+
+// 2. create a model
+
+// 3. create a controller to go get info from the database
+
+// 4. return that info
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
