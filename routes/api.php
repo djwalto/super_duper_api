@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Post;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,14 +30,8 @@ use App\Models\Post;
 // 5. delete (DELETE) /api/posts/{id}
 
 
+Route::resource('posts', 'PostController');
 
-Route::get('/posts', function () {
-    $post =  Post::create([
-        'title' => 'my first post',
-        'slug' => 'my-first-post'
-    ]);
-    return $post;
-});
 
 // to create a resource (posts) in laravel
 
