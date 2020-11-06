@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/posts', function () {
-    return ['message' => 'hello'];
+    $post =  Post::create([
+        'title' => 'my first post',
+        'slug' => 'my-first-post'
+    ]);
+    return $post;
 });
 
 // to create a resource (posts) in laravel
